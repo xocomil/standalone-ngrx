@@ -16,6 +16,8 @@ specifiers:
   '@angular/platform-browser': ~15.0.0
   '@angular/platform-browser-dynamic': ~15.0.0
   '@angular/router': ~15.0.0
+  '@ngrx/component': ^15.0.0
+  '@ngrx/effects': ^15.0.0
   '@ngrx/eslint-plugin': ^15.0.0
   '@ngrx/schematics': ^15.0.0
   '@ngrx/store': ^15.0.0
@@ -28,6 +30,7 @@ specifiers:
   '@nrwl/linter': 15.2.4
   '@nrwl/nx-cloud': latest
   '@nrwl/workspace': 15.2.4
+  '@schematics/angular': ^15.0.2
   '@types/jest': 28.1.1
   '@types/node': 18.11.10
   '@typescript-eslint/eslint-plugin': ^5.36.1
@@ -57,11 +60,14 @@ dependencies:
   '@angular/platform-browser': 15.0.2_c53tiokkldbnrdbarlei26dgcq
   '@angular/platform-browser-dynamic': 15.0.2_35pdmxna5zlo6jyg6u37zetaoe
   '@angular/router': 15.0.2_5wu52grs7aans5dk4ai6xt2mze
+  '@ngrx/component': 15.0.0_sxkzi2f6pgnnes3w6clxqg3z64
+  '@ngrx/effects': 15.0.0_iignxkz7c6nee3c2qmnwyskfou
   '@ngrx/eslint-plugin': 15.0.0_6rep66rojmwsn4bfraotajskeu
   '@ngrx/schematics': 15.0.0_4d472aryqpym2wzlk5icmty3mq
   '@ngrx/store': 15.0.0_pzwybxg44vqvol3naaqoey4hwi
   '@ngrx/store-devtools': 15.0.0_q5gyo4wvwkgjai45cinosbsqxa
   '@nrwl/angular': 15.2.4_bvjnjept2eyabpb5bkhjkpojlu
+  '@schematics/angular': 15.0.2
   rxjs: 7.6.0
   tslib: 2.4.1
   zone.js: 0.11.8
@@ -295,7 +301,6 @@ packages:
       jsonc-parser: 3.2.0
       rxjs: 6.6.7
       source-map: 0.7.4
-    dev: true
 
   /@angular-devkit/core/15.0.2_chokidar@3.5.3:
     resolution: {integrity: sha512-XkdNKyeYvnCq0zWuEda163muUV38ifNyK6EjrbhI5pQWNg7myxtDmLenjtpXLGLZwjxqsart2l/uoYsk1xQCmQ==}
@@ -337,7 +342,6 @@ packages:
       rxjs: 6.6.7
     transitivePeerDependencies:
       - chokidar
-    dev: true
 
   /@angular-devkit/schematics/15.0.2_chokidar@3.5.3:
     resolution: {integrity: sha512-FqimOzQCwRGmz/NPPiK6QpAxI+qpy8rYQRlWRWSOfQgjb+cl4rD2isllalYvzO+5mmb88fwJ7bj9cP2X5khpcg==}
@@ -3038,6 +3042,32 @@ packages:
   /@leichtgewicht/ip-codec/2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
 
+  /@ngrx/component/15.0.0_sxkzi2f6pgnnes3w6clxqg3z64:
+    resolution: {integrity: sha512-Qp8BUuZexUXuFNNOGfr2o1xePQTWrQQPImOwZZG4e2jrd6Eh/OBNX64PtX2ql/voxEunB4GbF7L6UMpF6J/KHg==}
+    peerDependencies:
+      '@angular/common': ^15.0.0
+      '@angular/core': ^15.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/common': 15.0.2_pzwybxg44vqvol3naaqoey4hwi
+      '@angular/core': 15.0.2_rxjs@7.6.0+zone.js@0.11.8
+      rxjs: 7.6.0
+      tslib: 2.4.1
+    dev: false
+
+  /@ngrx/effects/15.0.0_iignxkz7c6nee3c2qmnwyskfou:
+    resolution: {integrity: sha512-EfYmGYFF1bNLPCRPnfAZnppT47RPwpprZK6HSQQ1fvV0sA0FYKQilg93ictNhDv+0IhMBZJEbR/hBMYyi4rkBg==}
+    peerDependencies:
+      '@angular/core': ^15.0.0
+      '@ngrx/store': 15.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 15.0.2_rxjs@7.6.0+zone.js@0.11.8
+      '@ngrx/store': 15.0.0_pzwybxg44vqvol3naaqoey4hwi
+      rxjs: 7.6.0
+      tslib: 2.4.1
+    dev: false
+
   /@ngrx/eslint-plugin/15.0.0_6rep66rojmwsn4bfraotajskeu:
     resolution: {integrity: sha512-ywxT0Uc6egU0/GY9D/YxGeB/qGPmvDcNmTzMxXfXLrScDCkG+rh5Xjn0JLj2NVT+Am4kxzUWxE4PSuru7h0mlQ==}
     peerDependencies:
@@ -3627,7 +3657,6 @@ packages:
       jsonc-parser: 3.2.0
     transitivePeerDependencies:
       - chokidar
-    dev: true
 
   /@schematics/angular/15.0.2_chokidar@3.5.3:
     resolution: {integrity: sha512-h5vTcOkJD0s+BMHRI87fVyKB+A/YqFolR7fhmhETTq2NwRg2oR0HTf7DbjVxPBwhvI5XzUV1MBPb30xXR2UG0w==}

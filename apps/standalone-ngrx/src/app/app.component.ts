@@ -1,11 +1,11 @@
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { Component } from '@angular/core';
+import { StarWarsStoreComponent } from '@standalone-ngrx/star-wars-store';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent],
+  imports: [StarWarsStoreComponent],
   selector: 'st-ngrx-root',
-  template: ` <st-ngrx-nx-welcome></st-ngrx-nx-welcome> `,
+  template: ` <standalone-ngrx-star-wars-store></standalone-ngrx-star-wars-store> `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
